@@ -31,4 +31,16 @@ public class CarService {
     public List<Car> getCars(){
         return carRepository.getCars();
     }
+
+    public Car getCarById(String id){
+        return carRepository.getCarById(id);
+    }
+
+    public void deleteCar(String id){
+        carRepository.deleteCar(id);
+    }
+
+    public Car updateCar(String id, Car car){
+        return carRepository.updateCar(id, car);
+    }
 }

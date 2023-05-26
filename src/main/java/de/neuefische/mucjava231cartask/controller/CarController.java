@@ -21,6 +21,21 @@ public class CarController {
         return carService.getCars();
     }
 
+    @GetMapping("/{id}")
+    public Car getCarById(@PathVariable String id){
+        return carService.getCarById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteCar(@PathVariable String id){
+        carService.deleteCar(id);
+    }
+
+    @PutMapping("/{id}")
+    public Car updateCar(@PathVariable String id, @RequestBody Car car){
+        return carService.updateCar(id, car);
+    }
+
     @PostMapping
     public void addCar(@RequestBody Car car){
         carService.addCar(car);

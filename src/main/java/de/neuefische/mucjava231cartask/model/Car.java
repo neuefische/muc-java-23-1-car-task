@@ -3,14 +3,25 @@ package de.neuefische.mucjava231cartask.model;
 import java.util.Objects;
 
 public class Car {
+
+    private String id;
     private String brand;
     private int amountOfTires;
     private boolean hasTuev;
 
-    public Car(String brand, int amountOfTires, boolean hasTuev) {
+    public Car(String id, String brand, int amountOfTires, boolean hasTuev) {
+        this.id = id;
         this.brand = brand;
         this.amountOfTires = amountOfTires;
         this.hasTuev = hasTuev;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getBrand() {
